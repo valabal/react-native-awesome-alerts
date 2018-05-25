@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   action: {
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'flex-end',
+    alignItems: 'flex-start',
     marginTop: config.spacing.actionButtonMarginTop
   },
   title: {

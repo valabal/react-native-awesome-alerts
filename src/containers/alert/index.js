@@ -112,7 +112,7 @@ export default class Alert extends Component {
       confirmButtonTextStyle, onConfirmPressed } = this.props;
 
     const { alertContainerStyle, overlayStyle, progressSize, progressColor,
-      contentContainerStyle, titleStyle, messageStyle } = this.props;
+      contentContainerStyle, titleStyle, messageStyle, buttonBoxStyle } = this.props;
 
     const cancelButtonData = {
       text: cancelText,
@@ -129,7 +129,7 @@ export default class Alert extends Component {
       buttonTextStyle: confirmButtonTextStyle,
       onPress: onConfirmPressed
     };
-
+  
     return (
       <View style={[styles.container, alertContainerStyle]}>
         <TouchableWithoutFeedback onPress={this._onTapOutside} >
@@ -141,7 +141,7 @@ export default class Alert extends Component {
             {title && <Text style={[styles.title, titleStyle]}>{title}</Text>}
             {message && <Text style={[styles.message, messageStyle]}>{message}</Text>}
           </View>
-          <View style={styles.action}>
+          <View style={[styles.action,buttonBoxStyle]}>
             {showCancelButton && this._renderButton(cancelButtonData)}
             {showConfirmButton && this._renderButton(confirmButtonData)}
           </View>
