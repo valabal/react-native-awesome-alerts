@@ -31,11 +31,11 @@ const styles = StyleSheet.create({
     padding: config.spacing.alertContentPadding
   },
   action: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
+    flexDirection: "row-reverse",
+    justifyContent: "center",
+    alignItems: "flex-end",
     marginTop: config.spacing.actionButtonMarginTop
-  },
+ },
   title: {
     paddingVertical: config.spacing.titlePadding,
     paddingHorizontal: config.spacing.titlePaddingSides,
